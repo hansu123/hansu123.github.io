@@ -15,14 +15,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的标签云">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="hexo在yelee主题下搭建统计模块 1.安装 hexo-wordcount 在博客目录下打开Git Bash Here 输入命令 npm i –save hexo-wordcount">
+<meta name="keywords" content="hexo统计功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo(四)轻松整合统计模块">
+<meta property="og:url" content="http://yoursite.com/2018/01/13/hexo-四-轻松整合统计模块/index.html">
 <meta property="og:site_name" content="Hansu">
+<meta property="og:description" content="hexo在yelee主题下搭建统计模块 1.安装 hexo-wordcount 在博客目录下打开Git Bash Here 输入命令 npm i –save hexo-wordcount">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-13T14:07:27.035Z">
+<meta property="og:updated_time" content="2019-01-14T14:51:07.078Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的标签云">
+<meta name="twitter:title" content="hexo(四)轻松整合统计模块">
+<meta name="twitter:description" content="hexo在yelee主题下搭建统计模块 1.安装 hexo-wordcount 在博客目录下打开Git Bash Here 输入命令 npm i –save hexo-wordcount">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -54,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>我的标签云 | Hansu</title>
+<title>hexo(四)轻松整合统计模块 | Hansu</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -64,7 +68,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -278,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hexo-四-轻松整合统计模块" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/tags/index.html" class="article-date">
-      <time datetime="2019-01-13T05:24:07.000Z" itemprop="datePublished">2019-01-13</time>
+      <a href="/2018/01/13/hexo-四-轻松整合统计模块/" class="article-date">
+      <time datetime="2018-01-13T14:36:55.000Z" itemprop="datePublished">2018-01-13</time>
 </a>
 
 
@@ -297,7 +301,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的标签云
+      hexo(四)轻松整合统计模块
     </h1>
   
 
@@ -307,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">407字</span>
       </span>
     </span>
 
@@ -316,7 +320,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -326,8 +330,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/hexo轻松搭建/">hexo轻松搭建</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo统计功能/">hexo统计功能</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -335,103 +347,117 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p><strong>hexo在yelee主题下搭建统计模块</strong></p>
+<p><strong>1.安装 hexo-wordcount</strong></p>
+<p>在博客目录下打开Git Bash Here 输入命令</p>
+<p>npm i –save hexo-wordcount</p>
+<a id="more"></a>
+<p><strong>2.文件配置</strong><br>在theme\yilia\layout_partial\post下创建word.ejs文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;margin-top:10px;&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-keyboard-o&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span class=&quot;post-meta-item-text&quot;&gt;  字数统计: &lt;/span&gt;</span><br><span class="line">        &lt;span class=&quot;post-count&quot;&gt;&lt;%= wordcount(post.content) %&gt;字&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-hourglass-half&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span class=&quot;post-meta-item-text&quot;&gt;  阅读时长: &lt;/span&gt;</span><br><span class="line">        &lt;span class=&quot;post-count&quot;&gt;&lt;%= min2read(post.content) %&gt;分&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>3.然后在 themes/yilia/layout/_partial/article.ejs中添加
+</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;article-inner&quot;&gt;</span><br><span class="line">    &lt;% if (post.link || post.title)&#123; %&gt;</span><br><span class="line">      &lt;header class=&quot;article-header&quot;&gt;</span><br><span class="line">        &lt;%- partial(&apos;post/title&apos;, &#123;class_name: &apos;article-title&apos;&#125;) %&gt;</span><br><span class="line">        &lt;% if (!post.noDate)&#123; %&gt;</span><br><span class="line">        &lt;%- partial(&apos;post/date&apos;, &#123;class_name: &apos;archive-article-date&apos;, date_format: null&#125;) %&gt;</span><br><span class="line">        &lt;!-- 需要添加的位置 --&gt;</span><br><span class="line">        &lt;!-- 开始添加字数统计--&gt;</span><br><span class="line">        &lt;% if(theme.word_count &amp;&amp; !post.no_word_count)&#123;%&gt;</span><br><span class="line">          &lt;%- partial(&apos;post/word&apos;) %&gt;</span><br><span class="line">          &lt;% &#125; %&gt;</span><br><span class="line">        &lt;!-- 添加完成 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">      &lt;/header&gt;</span><br></pre></td></tr></table></figure></p>
+<p>**<font color="red">注意:</font><br>很多人做到上面两步，却发现页面并没有效果是因为没有开启功能</p>
+<p>只要在站点的_config.yml中添加下面代码</p>
+<p>是否开启字数统计</p>
+<p>不需要使用，直接设置值为false或注释掉<br><code>word_count: True</code></p>
 
-
-    <!-- Tag Cloud Page -->
-    <hr>
-<br>
-<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/css/">css</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo轻松搭建/">hexo轻松搭建</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js基础/">js基础</a><span class="category-list-count">1</span></li></ul>
-
-<p class="count"></p>
-
-<div class="tags">
-    <a href="/tags/Ajax/" style="font-size: 16px; color: #808080">Ajax</a> <a href="/tags/Markdown语法/" style="font-size: 16px; color: #808080">Markdown语法</a> <a href="/tags/css基础/" style="font-size: 16px; color: #808080">css基础</a> <a href="/tags/css布局/" style="font-size: 16px; color: #808080">css布局</a> <a href="/tags/hexo统计功能/" style="font-size: 35px; color: #000">hexo统计功能</a> <a href="/tags/hexo赞赏功能/" style="font-size: 16px; color: #808080">hexo赞赏功能</a>
-</div>
-<style>
-    .category-list li{
-        display: inline-block;
-        margin: 0 1em .5em 0;
-        padding: 4px;
-        border: 1px solid lightgray;
-        font-size: 1.2rem;
-    }
-    .category-list a { color: gray; }
-    .category-list-item:hover a {
-        color: gray;
-        text-decoration: none;
-    }
-    .category-list-count {
-        margin-left: 2px;
-        font-size: .9rem;
-    }
-    .article-entry ul li:before{ display: none; }
-    .article-inner { text-align: center; }
-    .tags {
-        max-width: 42em;
-        margin: 2em auto;
-        margin-top: 0em;
-    }
-    .tags a {
-        margin-right: 1em;
-        line-height: 65px;
-        border-bottom: 1px solid gray;
-        white-space: nowrap;
-        transition: border-bottom .5s;
-    }
-    .tags a:hover {
-        border-bottom: 3px dotted gray;
-        text-decoration: none;
-    }
-    #count > span {
-        margin: auto .2em;
-        font-weight: bold;
-    }
-</style>
-
-<!-- Count tags and categories -->
-<p id="count">
-        已有<span><script>document.write($(".category-list-item").length)</script></span>个分类，
-        共计<span><script>document.write($(".tags > a").length)</script></span>个标签
-</p>
-<script>
-    $('#count').appendTo('.count');
-</script>
-
-          
-        
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/01/13/hexo-四-轻松整合统计模块/">hexo(四)轻松整合统计模块</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Hansu</a></p>
+        <p><span>发布时间:</span>2018-01-13, 22:36:55</p>
+        <p><span>最后更新:</span>2019-01-14, 22:51:07</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/13/hexo-四-轻松整合统计模块/" title="hexo(四)轻松整合统计模块">http://yoursite.com/2018/01/13/hexo-四-轻松整合统计模块/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/01/13/hexo-四-轻松整合统计模块/　　作者: Hansu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/01/14/hexo-五-轻松整合赞赏模块/">
+                    hexo(五)轻松整合赞赏模块
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/01/12/hexo-三-轻松整合评论模块/">
+                    hexo(三)轻松整合评论模块
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
 
 
+   
+     <div class="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           好看的人都打赏了呢！<br>
+           此文对你有帮助？求支持！1分也是爱~ 谢谢！
+        </span>
+        <br>
+      </div>
+    <div id="donate_guide" class="donate_bar center hidden">
+         <!-- 支付宝打赏图案 -->
+        <img src="/img/Alipay.jpg" alt="支付宝打赏">
+        <!-- 微信打赏图案 -->
+        <img src="/img/weixin.jpg" alt="微信打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+   
+ 
 <!--打赏-->
 
 
 
 
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -449,7 +475,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"我的标签云　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"hexo(四)轻松整合统计模块　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -483,6 +509,26 @@
 </section>
 
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/01/14/hexo-五-轻松整合赞赏模块/" title="上一篇: hexo(五)轻松整合赞赏模块">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/01/12/hexo-三-轻松整合评论模块/" title="下一篇: hexo(三)轻松整合评论模块">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/14/三分钟玩转markdown/">三分钟玩转markdown</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/13/Ajax的两种写法/">Ajax的两种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/12/关于css的一些坑/">关于css的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/14/hexo-五-轻松整合赞赏模块/">hexo(五)轻松整合赞赏模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/13/hexo-四-轻松整合统计模块/">hexo(四)轻松整合统计模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/hexo-三-轻松整合评论模块/">hexo(三)轻松整合评论模块</a></li></ul>
 
 
 
