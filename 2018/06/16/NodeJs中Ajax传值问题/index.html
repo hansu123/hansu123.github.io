@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="前端最靓的仔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我是优秀本人">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="nodejs中ajax传值问题 最近在做一个资讯类的网站 打算使用layui+nodejs+mongodb去实现这个网站">
+<meta name="keywords" content="Ajax传值问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NodeJs中Ajax传值问题">
+<meta property="og:url" content="http://yoursite.com/2018/06/16/NodeJs中Ajax传值问题/index.html">
 <meta property="og:site_name" content="Hansu">
-<meta property="og:description" content="前端最靓的仔">
+<meta property="og:description" content="nodejs中ajax传值问题 最近在做一个资讯类的网站 打算使用layui+nodejs+mongodb去实现这个网站">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-13T13:12:41.562Z">
+<meta property="og:updated_time" content="2019-01-16T14:01:32.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我是优秀本人">
-<meta name="twitter:description" content="前端最靓的仔">
+<meta name="twitter:title" content="NodeJs中Ajax传值问题">
+<meta name="twitter:description" content="nodejs中ajax传值问题 最近在做一个资讯类的网站 打算使用layui+nodejs+mongodb去实现这个网站">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>我是优秀本人 | Hansu</title>
+<title>NodeJs中Ajax传值问题 | Hansu</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,7 +68,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -281,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-NodeJs中Ajax传值问题" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2019-01-13T12:35:59.000Z" itemprop="datePublished">2019-01-13</time>
+      <a href="/2018/06/16/NodeJs中Ajax传值问题/" class="article-date">
+      <time datetime="2018-06-16T13:28:04.000Z" itemprop="datePublished">2018-06-16</time>
 </a>
 
 
@@ -300,7 +301,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我是优秀本人
+      NodeJs中Ajax传值问题
     </h1>
   
 
@@ -310,7 +311,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">6字</span>
+        <span class="post-count">759字</span>
       </span>
     </span>
 
@@ -319,7 +320,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -329,8 +330,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Ajax/">Ajax</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax传值问题/">Ajax传值问题</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -338,26 +347,46 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p><strong>nodejs中ajax传值问题</strong></p>
+<p>最近在做一个资讯类的网站</p>
+<p>打算使用layui+nodejs+mongodb去实现这个网站</p>
+<a id="more"></a>
+<ul>
+<li>nodejs不用多说，各种模块，各种包，随取随用</li>
+<li>mongodb比mysql简单，而且不用去设置类型，长度，可以节约大量开发时间，提高效率</li>
+</ul>
+<p>开发中遇到了一个小问题就是关于<font color="red"><strong>页面传值问题</strong></font></p>
+<p><strong>一.使用场景如下：</strong></p>
+<ul>
+<li>页面一获取数据库中所有的文章信息，并在前台循环显示，只打印标题和作者</li>
+<li>用户点击标题（每个标题都有a链接），跳转到文章详情页面，查看具体文章内容</li>
+</ul>
+<p><strong>二.具体逻辑分析：</strong></p>
+<ul>
+<li>页面一每个标题都有循环打印的文章的id</li>
+<li>点击后将id值以get方式传递，并使用ajax在数据库中查询匹配id的文章，并返回结果</li>
+<li>页面二接收返回的结果，处理json数据后，打印文章内容</li>
+</ul>
+<p><strong>三.遇到的问题：</strong></p>
+<p>跳转，a标签链接跳转后，怎么让页面二获取id值</p>
+<p>试了好几种方法，差点把电脑砸了，因为如果用php几行代码就搞定，顿时觉得nodejs一无是处无力吐槽。</p>
+<p>没办法，自己选的语言哭着也要写完。</p>
+<p>仔细研究了一下，发现其实也并不难。</p>
+<font color="#dab171"><strong>1.首先设置一个接口/article，用来接收页面一的id</strong></font>
 
+<p>下图是页面1的ajax代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function showlist()&#123;</span><br><span class="line"></span><br><span class="line">var xhr=new XMLHttpRequest();</span><br><span class="line">xhr.onreadystatechange=function()&#123;</span><br><span class="line"></span><br><span class="line">if(xhr.readyState==4&amp;&amp;xhr.status==200)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">var result=JSON.parse(xhr.responseText);</span><br><span class="line"></span><br><span class="line">var htmlcode=&quot; &quot;;</span><br><span class="line">for(var i=0;i&lt;result.length;i++)&#123;</span><br><span class="line"></span><br><span class="line">htmlcode+=&quot;&lt;div id=&apos;item&apos;&gt;&lt;a href=&apos;/article?id=&quot;+result[i][&quot;_id&quot;]+&quot;&apos;&gt;&quot;+result[i].title+&quot;&lt;/a&gt;&lt;p&gt;&quot;+result[i].author+&quot;&lt;/p&gt;&lt;/div&gt;&quot;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">d1.innerHTML=htmlcode;</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(&quot;get&quot;,&quot;/list&quot;,true);</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.然后执行数据库查询，<font color="#dab171"><strong>设置一个全局变量data,将查询结果赋值给data</strong></font>,然后在最后设置一个重定向到页面二的地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var data;</span><br><span class="line"></span><br><span class="line">var ObjectId = require(&quot;mongodb&quot;).ObjectId;</span><br><span class="line">server.get(&quot;/article&quot;, (req, res) =&gt; &#123;</span><br><span class="line">  var $id = ObjectId(req.query.id);</span><br><span class="line">  MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">    var dbo = db.db(&quot;local&quot;);</span><br><span class="line">    dbo.collection(&quot;article&quot;).find(&#123;</span><br><span class="line">      _id: $id</span><br><span class="line">    &#125;).toArray((err, result) =&gt; &#123;</span><br><span class="line">      if (err) &#123;</span><br><span class="line">        throw err;</span><br><span class="line">      &#125;</span><br><span class="line">      data = result[0];</span><br><span class="line">      res.redirect(&quot;/article.html?id=&quot; + $id);</span><br><span class="line">      db.close();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>3.为第二个页面写一个接口/show,给页面二传递数据id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server.get(&quot;/show&quot;, (req, res) =&gt; &#123;</span><br><span class="line">  res.send(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>4.页面二，使用ajax接收到data后打印即可</p>
+<font color="#dab171"><strong>这里几个关键点就是:</strong></font>
 
-          
-        <p><strong>前端最靓的仔</strong></p>
+<p>1）设一个全局变量存储id的值</p>
+<p>2）还有就是ajax也可以什么数据都不发送，只用来获取数据</p>
+<p>3）如果打印不出内容，看看自己是否已将传过来的字符串转化为json对象，如果没有用JSON.parse(数据)即可</p>
+<p>当然可能还有其他更好的办法，以后想到再更新哈哈</p>
 
       
     </div>
@@ -365,17 +394,97 @@
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/06/16/NodeJs中Ajax传值问题/">NodeJs中Ajax传值问题</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Hansu</a></p>
+        <p><span>发布时间:</span>2018-06-16, 21:28:04</p>
+        <p><span>最后更新:</span>2019-01-16, 22:01:32</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/16/NodeJs中Ajax传值问题/" title="NodeJs中Ajax传值问题">http://yoursite.com/2018/06/16/NodeJs中Ajax传值问题/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/06/16/NodeJs中Ajax传值问题/　　作者: Hansu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/01/12/关于css的一些坑/">
+                    关于css的一些坑
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/06/14/Ajax实现智能搜索提示框/">
+                    Ajax实现智能搜索提示框
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
 
 
+   
+     <div class="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           好看的人都打赏了呢！<br>
+           此文对你有帮助？求支持！1分也是爱~ 谢谢！
+        </span>
+        <br>
+      </div>
+    <div id="donate_guide" class="donate_bar center hidden">
+         <!-- 支付宝打赏图案 -->
+        <img src="/img/Alipay.jpg" alt="支付宝打赏">
+        <!-- 微信打赏图案 -->
+        <img src="/img/weixin.jpg" alt="微信打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+   
+ 
 <!--打赏-->
 
 
 
 
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -393,7 +502,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"我是优秀本人　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"NodeJs中Ajax传值问题　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -427,6 +536,26 @@
 </section>
 
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/01/12/关于css的一些坑/" title="上一篇: 关于css的一些坑">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/06/14/Ajax实现智能搜索提示框/" title="下一篇: Ajax实现智能搜索提示框">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/14/三分钟玩转markdown/">三分钟玩转markdown</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/12/关于css的一些坑/">关于css的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/NodeJs中Ajax传值问题/">NodeJs中Ajax传值问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/Ajax实现智能搜索提示框/">Ajax实现智能搜索提示框</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/13/Ajax的两种写法/">Ajax的两种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/hexo-七-七牛云图床使用/">hexo(七)七牛云图床使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/14/hexo-五-轻松整合赞赏模块/">hexo(五)轻松整合赞赏模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/13/hexo-四-轻松整合统计模块/">hexo(四)轻松整合统计模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/hexo-三-轻松整合评论模块/">hexo(三)轻松整合评论模块</a></li></ul>
 
 
 

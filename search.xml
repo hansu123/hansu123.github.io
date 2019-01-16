@@ -29,9 +29,88 @@
     
     
     <entry>
+      <title>关于css的一些坑</title>
+      <link href="/2019/01/12/%E5%85%B3%E4%BA%8Ecss%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+      <url>/2019/01/12/%E5%85%B3%E4%BA%8Ecss%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
+      
+        <content type="html"><![CDATA[<p><strong>一.元素的分类</strong><br><a id="more"></a><br>1.块级元素:<br>默认占一行，可以设置宽高，可以设置内外边距，会继承父级元素的宽度<br>如：div,h1-h6,p,ul,ol,li…</p><p>2.行内元素:<br>横排显示，不可以设置宽高，上下外边距无效，可以设置上下内边距，但不会因此撑大父容器的文档流。<br>如：a，select，span，i，em<br>所以想给a标签设置宽高要设置display:inline-block;</p><p>3.行内块元素:<br>横排显示，可以设置宽高，可以设置内外边距，两个并排显示的行内块元素，它们上下的间隔距离，以其中最大的间距为主<br>如：img，input</p><p><strong>二.外边距的特殊效果</strong><br></p><p>1.外边距合并<br>当两个垂直外边距相遇时，他们将合并成一个，最终的距离取决于较大值<br>2.行内元素对外边距表现<br>行内元素垂直外边距无效（img 除外）<br>行内块对外边距的表现<br>同一行中，一个行内块设置了外边距，其他同行的行内块会跟着发生变化</p><p><strong>3.外边距溢出</strong><br></p><p>在特殊的条件下，为子元素设置上外边距，会作用到父元素</p><p>条件:<br><br>1.父元素没有上边框</p><p>2.为第一个子元素设置上外边距<br><br><img src="http://plbt3fe5s.bkt.clouddn.com/01.png" alt=""></p><p>解决方案：</p><p>1.为父元素添加上边框 弊端：影响了父元素的实际高度</p><p>2.为父元素添加上内边距 弊端：影响了父元素的实际高度</p><p>3.在父元素第一个子元素的位置，添加一个空的table标签</p><p><strong>三.理解浮动</strong></p><p>1,默认文档流<br>元素按照从左到右，从上往下排列</p><p>2.浮动<br>当元素设置浮动之后，该元素脱离默认文档流，<strong>后面的非浮动元素会上前补位。</strong><br>当前元素会在当前行，向左或者向右排列</p><font color="red"><strong>也就是说浮动元素浮动到了垂直的上一层，而默认文档流中的元素，依然会根据默认方式排列。</strong></font><p><strong>四.高度坍塌</strong></p><p>块级元素的高度如果不设置，高度以内部元素内容为准<br>但是如果内部元素都是浮动元素，浮动元素不占据页面控件<br>父元素的高，没有了</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/02.png" alt=""></p><p>解决方案：</p><p>1.直接为父元素设置高度<br>弊端：不知道父元素的高度</p><p>2.父元素也浮动<br>弊端：浮动会影响后续元素<br>3.overflow:hidden<br>弊端：当元素真的需要显示溢出内容的时候，就显示不出来了<br>4.在父元素中追加一个空的块级元素，并设置clear:both</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css布局 </tag>
+            
+            <tag> css基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NodeJs中Ajax传值问题</title>
+      <link href="/2018/06/16/NodeJs%E4%B8%ADAjax%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/"/>
+      <url>/2018/06/16/NodeJs%E4%B8%ADAjax%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p><strong>nodejs中ajax传值问题</strong></p><p>最近在做一个资讯类的网站</p><p>打算使用layui+nodejs+mongodb去实现这个网站</p><a id="more"></a><ul><li>nodejs不用多说，各种模块，各种包，随取随用</li><li>mongodb比mysql简单，而且不用去设置类型，长度，可以节约大量开发时间，提高效率</li></ul><p>开发中遇到了一个小问题就是关于<font color="red"><strong>页面传值问题</strong></font></p><p><strong>一.使用场景如下：</strong></p><ul><li>页面一获取数据库中所有的文章信息，并在前台循环显示，只打印标题和作者</li><li>用户点击标题（每个标题都有a链接），跳转到文章详情页面，查看具体文章内容</li></ul><p><strong>二.具体逻辑分析：</strong></p><ul><li>页面一每个标题都有循环打印的文章的id</li><li>点击后将id值以get方式传递，并使用ajax在数据库中查询匹配id的文章，并返回结果</li><li>页面二接收返回的结果，处理json数据后，打印文章内容</li></ul><p><strong>三.遇到的问题：</strong></p><p>跳转，a标签链接跳转后，怎么让页面二获取id值</p><p>试了好几种方法，差点把电脑砸了，因为如果用php几行代码就搞定，顿时觉得nodejs一无是处无力吐槽。</p><p>没办法，自己选的语言哭着也要写完。</p><p>仔细研究了一下，发现其实也并不难。</p><font color="#dab171"><strong>1.首先设置一个接口/article，用来接收页面一的id</strong></font><p>下图是页面1的ajax代码:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function showlist()&#123;</span><br><span class="line"></span><br><span class="line">var xhr=new XMLHttpRequest();</span><br><span class="line">xhr.onreadystatechange=function()&#123;</span><br><span class="line"></span><br><span class="line">if(xhr.readyState==4&amp;&amp;xhr.status==200)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">var result=JSON.parse(xhr.responseText);</span><br><span class="line"></span><br><span class="line">var htmlcode=&quot; &quot;;</span><br><span class="line">for(var i=0;i&lt;result.length;i++)&#123;</span><br><span class="line"></span><br><span class="line">htmlcode+=&quot;&lt;div id=&apos;item&apos;&gt;&lt;a href=&apos;/article?id=&quot;+result[i][&quot;_id&quot;]+&quot;&apos;&gt;&quot;+result[i].title+&quot;&lt;/a&gt;&lt;p&gt;&quot;+result[i].author+&quot;&lt;/p&gt;&lt;/div&gt;&quot;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">d1.innerHTML=htmlcode;</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(&quot;get&quot;,&quot;/list&quot;,true);</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>2.然后执行数据库查询，<font color="#dab171"><strong>设置一个全局变量data,将查询结果赋值给data</strong></font>,然后在最后设置一个重定向到页面二的地址</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var data;</span><br><span class="line"></span><br><span class="line">var ObjectId = require(&quot;mongodb&quot;).ObjectId;</span><br><span class="line">server.get(&quot;/article&quot;, (req, res) =&gt; &#123;</span><br><span class="line">  var $id = ObjectId(req.query.id);</span><br><span class="line">  MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">    var dbo = db.db(&quot;local&quot;);</span><br><span class="line">    dbo.collection(&quot;article&quot;).find(&#123;</span><br><span class="line">      _id: $id</span><br><span class="line">    &#125;).toArray((err, result) =&gt; &#123;</span><br><span class="line">      if (err) &#123;</span><br><span class="line">        throw err;</span><br><span class="line">      &#125;</span><br><span class="line">      data = result[0];</span><br><span class="line">      res.redirect(&quot;/article.html?id=&quot; + $id);</span><br><span class="line">      db.close();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>3.为第二个页面写一个接口/show,给页面二传递数据id</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server.get(&quot;/show&quot;, (req, res) =&gt; &#123;</span><br><span class="line">  res.send(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>4.页面二，使用ajax接收到data后打印即可</p><font color="#dab171"><strong>这里几个关键点就是:</strong></font><p>1）设一个全局变量存储id的值</p><p>2）还有就是ajax也可以什么数据都不发送，只用来获取数据</p><p>3）如果打印不出内容，看看自己是否已将传过来的字符串转化为json对象，如果没有用JSON.parse(数据)即可</p><p>当然可能还有其他更好的办法，以后想到再更新哈哈</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Ajax </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ajax传值问题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ajax实现智能搜索提示框</title>
+      <link href="/2018/06/14/Ajax%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2%E6%8F%90%E7%A4%BA%E6%A1%86/"/>
+      <url>/2018/06/14/Ajax%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2%E6%8F%90%E7%A4%BA%E6%A1%86/</url>
+      
+        <content type="html"><![CDATA[<p><strong>Ajax制作智能提示搜索框</strong></p><a id="more"></a><p>今天闲来无事，想在网站上加点新鲜内容，于是在搜索框上下了点文章。</p><p>灵感呢来自百度，来自阿里巴巴，总之有提示框的地方都是我灵感的来源，具体怎么做呢，其实so easy!</p><p><strong>一.必备技术：</strong></p><ol><li><p>ajax</p></li><li><p>数据库mysql或者mongodb都可以 </p></li><li><p>后台语言php或者nodejs都行，至于js你可以用原生也可以JQuery</p></li></ol><p>语言什么的其实都不重要，方法思路才是最关键的。</p><p><strong>二.整个流程</strong>：</p><ul><li>用户向搜索框写入要查询的关键字，每次输入完一个字符后，便会出现下拉框提示。</li><li>移动到下拉框中的关键字，关键字所在行改变背景颜色，点击后跳转到相应页面。</li><li>当输入为空时，下拉框消失。</li></ul><p><strong>三.实现</strong>：</p><p>下面就具体分析下实现思路：</p><p>1）每次输入一个字符便触发相应的事件,这里可以使用js中<font color="#dab171"><strong>键盘抬起事件onkeyup()</strong></font>,每当键盘抬起便触发相应的函数</p><p>2）触发什么函数呢？当然是ajax异步交互啦！用户每输入一个关键字，都会讲这个值用ajax向后台发送get请求，并接受响应。</p><p>3）后台需要完成什么过程呢？需要将传过来的get值，作为查询的值在数据库中进行模糊查询，并将结果集返回给前台页面。</p><p>4）前台接受响应数据后，在页面中渲染即可。</p><p>逻辑图如下：</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/ajaxajax_search.png" alt=""></p><p>下面贴相关主要代码，我采用的是thinkphp框架写的</p><ul><li>onkeyup()的函数search_more()</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function search_more()&#123;</span><br><span class="line">if(h_search.value==&quot;&quot;)&#123;$(&quot;.mallSearch .search-list&quot;).css(&quot;display&quot;,&quot;none&quot;);&#125;</span><br><span class="line">else&#123;</span><br><span class="line">$(&quot;.mallSearch .search-list&quot;).css(&quot;display&quot;,&quot;block&quot;);</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">type:&quot;get&quot;,</span><br><span class="line">url:&quot;&#123;:url(&apos;index/index/ksearch&apos;)&#125;&quot;,</span><br><span class="line">data:&#123;keyword:h_search.value&#125;,</span><br><span class="line">success:(data)=&gt;&#123;</span><br><span class="line">var htmlcode=&quot; &quot;;</span><br><span class="line">var $id;</span><br><span class="line">for(var i=0;i&lt;data.data.length;i++)&#123;</span><br><span class="line">$id=data.data[i][&apos;product_name&apos;];</span><br><span class="line">htmlcode+=&quot;&lt;a href=&apos;&#123;:url(&apos;index/index/details&apos;)&#125;&apos;&gt;&quot;+(data.data[i][&apos;product_name&apos;])+&quot;&lt;/a&gt;&quot;;//向下拉框页面循环插入a标签</span><br><span class="line">&#125;</span><br><span class="line">$(&quot;.mallSearch .search-list&quot;).html(htmlcode);</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>后台代码（不同后台处理不一样）</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public function ksearch()&#123;</span><br><span class="line">$result=Product::where(&quot;product_name&quot;,&apos;like&apos;,&quot;%&#123;$_GET[&apos;keyword&apos;]&#125;%&quot;)-&gt;select();</span><br><span class="line">return array(&apos;data&apos;=&gt;$result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>四.遇到的问题</strong>：</p><p>1.这里今天处理后台的时候遇到一个小坑，就是tp5对于多条数据查询返回的是一个数据集对象。如果是find()返回的是一个一维数组直接打印就好了，但是select()就很头疼了，直接打印打印不了，dump的话是一堆乱七八糟无用的东西，后来在百度查了好久发现只要将其数据对象转化为数组即可。</p><p>一开始我试着用了toArray()这个方法发现不好使.因为它只对非模型操作数据库好使<br>后来又试了一下<br><code>array(&#39;data&#39;=&gt;$result);</code>game over!</p><p>2.<code>$result=Product::where(&quot;product_name&quot;,&#39;like&#39;,&quot;%{$_GET[&#39;keyword&#39;]}%&quot;)</code><br>sql语句容易写错<code>{$_GET[&#39;keyword&#39;]}</code>,<font color="#dab171"><strong>两边大括号别忘了，大括号相当于echo</strong></font></p><p>下面是最终效果:</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/ajaxsearch_result.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Ajax </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ajax小应用 </tag>
+            
+            <tag> Ajax智能提示搜索框 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ajax的两种写法</title>
-      <link href="/2019/01/13/Ajax%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95/"/>
-      <url>/2019/01/13/Ajax%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95/</url>
+      <link href="/2018/06/13/Ajax%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95/"/>
+      <url>/2018/06/13/Ajax%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95/</url>
       
         <content type="html"><![CDATA[<p><strong>Ajax:(Asynchronous Javascript And XML)</strong><br><br>简称为异步的js和xml</p><a id="more"></a><p>Js中有两种写法：原生Js和JQuery</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//原生js写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> xhr=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>&amp;&amp;xhr.status==<span class="number">200</span>)&#123;</span><br><span class="line"><span class="keyword">var</span> result=xhr.responseText;</span><br><span class="line">alert(result);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(<span class="string">'get'</span>,<span class="string">'demo/login'</span>,<span class="literal">true</span>);</span><br><span class="line">xhr.send();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//jquery封装后的写法</span></span><br><span class="line"><span class="comment">//第一种写法</span></span><br><span class="line">$(<span class="string">"#btn"</span>).click(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">type:<span class="string">"GET"</span>,</span><br><span class="line">url:<span class="string">"demo/login"</span>,</span><br><span class="line">data:<span class="string">"uname=hansu"</span>,</span><br><span class="line">success:<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;alert(data);&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//第二种写法</span></span><br><span class="line">$.get(<span class="string">"demo/login"</span>,&#123;<span class="attr">uname</span>:<span class="string">'hansu'</span>&#125;,(data,status)=&gt;&#123;alert(data+<span class="string">":"</span>+status);&#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
       
@@ -54,25 +133,23 @@
     
     
     <entry>
-      <title>关于css的一些坑</title>
-      <link href="/2019/01/12/%E5%85%B3%E4%BA%8Ecss%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
-      <url>/2019/01/12/%E5%85%B3%E4%BA%8Ecss%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
+      <title>hexo(七)七牛云图床使用</title>
+      <link href="/2018/01/16/hexo-%E4%B8%83-%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/"/>
+      <url>/2018/01/16/hexo-%E4%B8%83-%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<p><strong>一.元素的分类</strong><br><a id="more"></a><br>1.块级元素:<br>默认占一行，可以设置宽高，可以设置内外边距，会继承父级元素的宽度<br>如：div,h1-h6,p,ul,ol,li…</p><p>2.行内元素:<br>横排显示，不可以设置宽高，上下外边距无效，可以设置上下内边距，但不会因此撑大父容器的文档流。<br>如：a，select，span，i，em<br>所以想给a标签设置宽高要设置display:inline-block;</p><p>3.行内块元素:<br>横排显示，可以设置宽高，可以设置内外边距，两个并排显示的行内块元素，它们上下的间隔距离，以其中最大的间距为主<br>如：img，input</p><p><strong>二.外边距的特殊效果</strong><br></p><p>1.外边距合并<br>当两个垂直外边距相遇时，他们将合并成一个，最终的距离取决于较大值<br>2.行内元素对外边距表现<br>行内元素垂直外边距无效（img 除外）<br>行内块对外边距的表现<br>同一行中，一个行内块设置了外边距，其他同行的行内块会跟着发生变化</p><p><strong>3.外边距溢出</strong><br></p><p>在特殊的条件下，为子元素设置上外边距，会作用到父元素</p><p>条件:<br><br>1.父元素没有上边框</p><p>2.为第一个子元素设置上外边距<br><br><img src="/2019/01/12/关于css的一些坑/01.png" alt=""></p><p>解决方案：</p><p>1.为父元素添加上边框 弊端：影响了父元素的实际高度</p><p>2.为父元素添加上内边距 弊端：影响了父元素的实际高度</p><p>3.在父元素第一个子元素的位置，添加一个空的table标签</p><p><strong>三.理解浮动</strong></p><p>1,默认文档流<br>元素按照从左到右，从上往下排列</p><p>2.浮动<br>当元素设置浮动之后，该元素脱离默认文档流，<strong>后面的非浮动元素会上前补位。</strong><br>当前元素会在当前行，向左或者向右排列</p><font color="red"><strong>也就是说浮动元素浮动到了垂直的上一层，而默认文档流中的元素，依然会根据默认方式排列。</strong></font><p><strong>四.高度坍塌</strong></p><p>块级元素的高度如果不设置，高度以内部元素内容为准<br>但是如果内部元素都是浮动元素，浮动元素不占据页面控件<br>父元素的高，没有了</p><p><img src="/2019/01/12/关于css的一些坑/02.png" alt=""></p><p>解决方案：</p><p>1.直接为父元素设置高度<br>弊端：不知道父元素的高度</p><p>2.父元素也浮动<br>弊端：浮动会影响后续元素<br>3.overflow:hidden<br>弊端：当元素真的需要显示溢出内容的时候，就显示不出来了<br>4.在父元素中追加一个空的块级元素，并设置clear:both</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>还在为空间大小七而烦恼吗？</strong></p><p><strong>牛云搭配Hexo简直天作之合</strong><br><a id="more"></a><br>一.登录网站</p><p><a href="https://portal.qiniu.com/create" title="千牛云" target="_blank" rel="noopener">千牛云网站链接</a></p><p>二.创建空间</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/hexo3305482-bd3c360707aff31a.png" alt=""></p><p>当然之前要实名认证</p><p>上面说“ 华北区域尚未支持自定义数据处理服务，一旦创建区域无法修改，请谨慎选择。 ”所以默默选择了华东，然后控制是我选的是公开的，私有的获取外链方式不一样后续介绍。好了，恭喜你，你已经完成了菜鸟任务。</p><p>三.点击内容管理</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/hexo3305482-47f50ed317d8a425.jpg" alt=""></p><p>四.点击上传文件即可</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/hexo3305482-e8300d1b3a96f42d.jpg" alt=""></p><p>然后每个图片最右边有几个小点的地方，点击会出现复制外链，粘贴到文档中即可</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/hexo3305482-6c33aa4af501ade4.png" alt=""></p><p><code>![](复制的外链)</code></p><p>大功告成，是不是超级简单！</p>]]></content>
       
       
       <categories>
           
-          <category> css </category>
+          <category> hexo轻松搭建 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> css布局 </tag>
-            
-            <tag> css基础 </tag>
+            <tag> hexo搭配图床 </tag>
             
         </tags>
       
@@ -135,7 +212,7 @@
       <link href="/2018/01/12/hexo-%E4%B8%89-%E8%BD%BB%E6%9D%BE%E6%95%B4%E5%90%88%E8%AF%84%E8%AE%BA%E6%A8%A1%E5%9D%97/"/>
       <url>/2018/01/12/hexo-%E4%B8%89-%E8%BD%BB%E6%9D%BE%E6%95%B4%E5%90%88%E8%AF%84%E8%AE%BA%E6%A8%A1%E5%9D%97/</url>
       
-        <content type="html"><![CDATA[<p><strong>hexo在yelee主题下搭建评论模块</strong></p><p>评论功能概述<br>目前博客站点使用的评论功能，多说，网易云跟贴都已经下线。Disqus也被挡在墙外，友言貌似也不行。<br><a id="more"></a><br>可用的评论系统大概有：</p><ol><li><p>HyperComments：<a href="https://www.hypercomments.com（来自俄罗斯的评论系统，使用谷歌账号注册。可以访问，不会用，好气）" target="_blank" rel="noopener">https://www.hypercomments.com（来自俄罗斯的评论系统，使用谷歌账号注册。可以访问，不会用，好气）</a></p></li><li><p>来必力：<a href="https://livere.com" target="_blank" rel="noopener">https://livere.com</a> （来自韩国，使用邮箱注册。）</p></li><li><p>畅言： <a href="http://changyan.kuaizhan.com" target="_blank" rel="noopener">http://changyan.kuaizhan.com</a> （安装需要备案号。不太好用。）</p></li><li><p>Gitment： <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">https://github.com/imsun/gitment</a> （有点小bug，比如说每次需要手动初始化，登录时会跳到主页。。）</p></li><li><p>Valine:  <a href="https://github.com/xCss/Valine" target="_blank" rel="noopener">https://github.com/xCss/Valine</a>  (基于Leancloud的极简风评论系统，用了下，没效果，是我Next主题的原因还是？）</p></li></ol><p>综上，最终采用了来必力。</p><p><strong>注册账号</strong></p><p>打开来必力官网：<br><a href="https://livere.com" target="_blank" rel="noopener">https://livere.com</a><br>按套路注册（有可能注册上面要花费点功夫）。来到如下界面</p><p><img src="/2018/01/12/hexo-三-轻松整合评论模块/1.jpg" alt=""></p><p>安装<br>点击上方的安装</p><p>选择免费的city版本。</p><p>选择免费的city版本</p><p>并点击现在安装，出现如下界面。</p><p><img src="/2018/01/12/hexo-三-轻松整合评论模块/2.jpg" alt=""></p><p>uid字段的位置</p><p>复制其中的uid字段</p><p>打开主题目录下的blog/themes/next/_config.yml配置文件，定位到livere_uid字段，粘贴上刚刚复制的UID。</p><p>至此，大功告成。<br>效果展示<br>测试评论如图所示：</p><p><img src="/2018/01/12/hexo-三-轻松整合评论模块/3.jpg" alt=""></p><p>效果展示</p><p>设置提醒<br>当有新评论出现时，通过邮箱提醒。<br>点击右上角-&gt;管理页面。选择评论提醒，按照下图设置，输入邮箱、选择间隔时间。</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>hexo在yelee主题下搭建评论模块</strong></p><p>评论功能概述<br>目前博客站点使用的评论功能，多说，网易云跟贴都已经下线。Disqus也被挡在墙外，友言貌似也不行。<br><a id="more"></a><br>可用的评论系统大概有：</p><ol><li><p>HyperComments：<a href="https://www.hypercomments.com（来自俄罗斯的评论系统，使用谷歌账号注册。可以访问，不会用，好气）" target="_blank" rel="noopener">https://www.hypercomments.com（来自俄罗斯的评论系统，使用谷歌账号注册。可以访问，不会用，好气）</a></p></li><li><p>来必力：<a href="https://livere.com" target="_blank" rel="noopener">https://livere.com</a> （来自韩国，使用邮箱注册。）</p></li><li><p>畅言： <a href="http://changyan.kuaizhan.com" target="_blank" rel="noopener">http://changyan.kuaizhan.com</a> （安装需要备案号。不太好用。）</p></li><li><p>Gitment： <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">https://github.com/imsun/gitment</a> （有点小bug，比如说每次需要手动初始化，登录时会跳到主页。。）</p></li><li><p>Valine:  <a href="https://github.com/xCss/Valine" target="_blank" rel="noopener">https://github.com/xCss/Valine</a>  (基于Leancloud的极简风评论系统，用了下，没效果，是我Next主题的原因还是？）</p></li></ol><p>综上，最终采用了来必力。</p><p><strong>注册账号</strong></p><p>打开来必力官网：<br><a href="https://livere.com" target="_blank" rel="noopener">https://livere.com</a><br>按套路注册（有可能注册上面要花费点功夫）。来到如下界面</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/1.jpg" alt=""></p><p>安装<br>点击上方的安装</p><p>选择免费的city版本。</p><p>选择免费的city版本</p><p>并点击现在安装，出现如下界面。</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/2.jpg" alt=""></p><p>uid字段的位置</p><p>复制其中的uid字段</p><p>打开主题目录下的blog/themes/next/_config.yml配置文件，定位到livere_uid字段，粘贴上刚刚复制的UID。</p><p>至此，大功告成。<br>效果展示<br>测试评论如图所示：</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/3.jpg" alt=""></p><p>效果展示</p><p>设置提醒<br>当有新评论出现时，通过邮箱提醒。<br>点击右上角-&gt;管理页面。选择评论提醒，按照下图设置，输入邮箱、选择间隔时间。</p>]]></content>
       
       
       <categories>
