@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Markdown语法">
-<meta name="keywords" content="Markdown语法">
+<meta name="description" content="MongoDB使用手册 MongoDB非关系型数据库。最近火的一塌糊涂，随着越来越多的程序开始使用MongoDB，MongoDB已经成为程序员必不可少的一项技能。">
+<meta name="keywords" content="MongoDB基本用法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="三分钟玩转markdown">
-<meta property="og:url" content="http://hansu123.github.io/2019/01/14/三分钟玩转markdown/index.html">
+<meta property="og:title" content="mongodb快速上手">
+<meta property="og:url" content="http://hansu123.github.io/2018/08/17/mongodb快速上手/index.html">
 <meta property="og:site_name" content="Hansu">
-<meta property="og:description" content="Markdown语法">
+<meta property="og:description" content="MongoDB使用手册 MongoDB非关系型数据库。最近火的一塌糊涂，随着越来越多的程序开始使用MongoDB，MongoDB已经成为程序员必不可少的一项技能。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-17T15:08:11.065Z">
+<meta property="og:updated_time" content="2019-01-17T15:23:27.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三分钟玩转markdown">
-<meta name="twitter:description" content="Markdown语法">
+<meta name="twitter:title" content="mongodb快速上手">
+<meta name="twitter:description" content="MongoDB使用手册 MongoDB非关系型数据库。最近火的一塌糊涂，随着越来越多的程序开始使用MongoDB，MongoDB已经成为程序员必不可少的一项技能。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>三分钟玩转markdown | Hansu</title>
+<title>mongodb快速上手 | Hansu</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -289,11 +289,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-三分钟玩转markdown" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mongodb快速上手" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/01/14/三分钟玩转markdown/" class="article-date">
-      <time datetime="2019-01-14T14:09:13.000Z" itemprop="datePublished">2019-01-14</time>
+      <a href="/2018/08/17/mongodb快速上手/" class="article-date">
+      <time datetime="2018-08-17T15:14:06.000Z" itemprop="datePublished">2018-08-17</time>
 </a>
 
 
@@ -308,7 +308,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      三分钟玩转markdown
+      mongodb快速上手
     </h1>
   
 
@@ -318,7 +318,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">458字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
 
@@ -327,7 +327,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -338,13 +338,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Markdown/">Markdown</a>
+    <a class="article-category-link" href="/categories/MongoDB/">MongoDB</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown语法/">Markdown语法</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB基本用法/">MongoDB基本用法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -354,56 +354,69 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong>Markdown语法</strong><br><a id="more"></a><br><strong>一.html显示</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;table width=&quot;400px&quot; height=&quot;400px&quot; border=&quot;2px&quot;&gt;</span><br><span class="line">&lt;thead&gt;</span><br><span class="line">&lt;tr align=&quot;center&quot;&gt;&lt;th&gt;姓名&lt;/th&gt;&lt;th&gt;性别&lt;/th&gt;&lt;/tr&gt;</span><br><span class="line">&lt;tr align=&quot;center&quot;&gt;&lt;td&gt;韩苏&lt;/td&gt;&lt;td&gt;男&lt;/td&gt;&lt;/tr&gt;</span><br><span class="line">&lt;/thead&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
-<p>markdown中可以兼容html代码,但是在html代码中写入mardown语法是无法被编译的</p>
-<p><strong>二.区块元素</strong></p>
-<p><strong>1.换行和强调：</strong></p>
-<p>1）换行直接使用回车或者在段落后添加<code>&lt;br&gt;</code></p>
-<p>2）强调直接收尾使用**</p>
-<p><strong>2.标题</strong></p>
-<p>1)类Atx，用#表示，最多可写6个#，#越多标题越小</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line"></span><br><span class="line">#这是大标题#</span><br><span class="line"></span><br><span class="line">##这是中标题##</span><br><span class="line"></span><br><span class="line">###这是小标题###</span><br><span class="line"></span><br><span class="line">效果如下：</span><br></pre></td></tr></table></figure>
-<p>#这是大标题#</p>
-<p>##这是中标题##</p>
-<p>###这是小标题###</p>
-<p>2)类setext，用任意数量的=和-表示，=表示最高阶标题，-表示二阶标题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line"></span><br><span class="line">这是大标题</span><br><span class="line"></span><br><span class="line">===</span><br><span class="line"></span><br><span class="line">这是小标题</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">效果如下</span><br></pre></td></tr></table></figure>
-<h1 id="这是大标题"><a href="#这是大标题" class="headerlink" title="这是大标题"></a>这是大标题</h1><h2 id="这是小标题"><a href="#这是小标题" class="headerlink" title="这是小标题"></a>这是小标题</h2><p><strong>3.区块引用</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：&gt;这是引用区域</span><br></pre></td></tr></table></figure></p>
-<p>1）.引用可以嵌套<br>2）.引用可以和其他mardown语法公用</p>
-<blockquote>
-<p>这是引用区域</p>
-</blockquote>
-<p><strong>4.列表</strong></p>
-<p>无序列表可以用*，+，-</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*	列表1</span><br><span class="line">*	列表2</span><br><span class="line">*	列表3</span><br><span class="line"></span><br><span class="line">效果如下</span><br></pre></td></tr></table></figure>
+        <p><strong>MongoDB使用手册</strong></p>
+<p>MongoDB非关系型数据库。最近火的一塌糊涂，随着越来越多的程序开始使用MongoDB，MongoDB已经成为程序员必不可少的一项技能。</p>
+<a id="more"></a>
+<p>与mysql相比优点如下：</p>
 <ul>
-<li>列表1</li>
-<li>列表2</li>
-<li>列表3</li>
+<li>使用动态模式，不需要预先定于结构（字段，类型，主键…）</li>
+<li>轻松扩展，无需停机，无需更改应用程序</li>
+<li>灵活可以快速构建应用程序</li>
+<li>数据以对象的形式存储，更好理解</li>
 </ul>
-<p>注意*和文字之间用tab键隔开</p>
-<p>有序列表可以用数字和英文.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.	列表1</span><br><span class="line">2.	列表2</span><br><span class="line">3.	列表3</span><br></pre></td></tr></table></figure>
+<p>最近闲来无事，研究了一下一直没时间研究的MongoDB</p>
+<p>首先去官网下载MongoDB即可<br>下载到本地后打开MongoDB&gt;bin&gt;mongodb.exe即可操作</p>
+<p><strong>一.MongoDB基本操作</strong></p>
+<p><strong>1.show dbs 查看所有数据库</strong><br>use 数据库名<br>db看数据库名称<br>db.dropDatabase()删除指定数据库<br>db.createCollection(‘users’);创建集合</p>
+<p><strong>2.插入数据</strong><br>语法：db.集合名.insert({json数据})<br>如db.users.insert({<br>name:”hansu”,<br>age:40,<br>sex:’男’<br>});</p>
+<p>当然也可以设置变量插入<br>var user1={<br>name:’zhangsan’,<br>age:30,<br>sex:”男”<br>}<br>db.users.insert({user1});</p>
+<p>多条数据 insertMany()</p>
+<p>var student=[<br>{name:’james’,age:20},{name:’paul’,age:22}<br>];</p>
+<p>db.users.insertMany(student);</p>
+<p><strong>3.更新</strong></p>
+<p>语法：db.集合名.update({查询条件},{<font color="red"><strong>$set:</strong></font>{修改的值}},{upsert:boolean,multi:boolean,writeConcern:<document>})；//boolean指true/false<br>其中有几个参数：<br><strong>upsert</strong>:如果不存在update记录，是够插入objNew，true为插入，默认是false不插入<br><strong>multi</strong>:可选，true为全部替换，false为只替换第一条记录，默认为false<br>writeConcern:可选，抛出异常级别<br>如db.users.update({name:’hansu’},{$set:{name:’james’}},{upsert:false,multi:true});//全部替换要查询的值<br>如db.users.update({name:’hansu’},{$set:{name:’james’}},true,true);//全部替换全部插入</document></p>
+<p><strong>4.删除</strong></p>
+<p>语法：db.集合名.remove({删除的数据}，{justOne:boolean,writeConcern:<document>})<br><strong>justOne</strong>:如果为true只删除一条，如果为false删除全部，默认为false<br>如db.users.remove({age:20},1)//删除第一条age为20记录<br>如db.users.remove({age:20},{justOne:true})//删除第一条age为20记录<br>如db.users.remove({age:20})//删除全部age为20记录</document></p>
+<p><strong>5.查询</strong></p>
+<p>语法：db.表名.find(/查询条件).pretty()<br>pretty()表示将数据以结构化的方式呈现，增加易读性</p>
+<p>查询条件<br>1）等于 find({属性:属性值})<br>2）小于$lt  find({属性:{$lt:属性值}})<br>3）小于等于$lte  find({属性:{$lte:属性值}})<br>4）大于$gt  find({属性:{$gt:属性值}})<br>5）大于等于$gte  find({属性:{$gte:属性值}})<br>6）不等于$ne  find({属性:{$ne:属性值}})<br>7）大于某值，小于某值 find({属性:{$gt:属性值,$lt:属性值}})</p>
+<p>and查询<br>find({属性名:属性值,属性名:属性值})<br>多个条件之间用逗号隔开即可</p>
+<p>or查询<br>find({<font color="red"><strong>$or:[{属性名:属性值,属性名:属性值}]</strong></font>})</p>
+<p>and与or连用</p>
+<p>find({属性名:属性值,$or:[{属性名:属性值}]})</p>
+<p><strong>二.mongodb+nodejs</strong></p>
+<p>1.nodejs连接数据库</p>
+<p>第一种方法<br>/*<br>可以用npm方式安装，也可以去网上下载包后拷贝到node_modules</p>
+<p>安装模块 mongoose /npm install mongoose –save</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var mongoose = require(&quot;mongoose&quot;);</span><br><span class="line">var url = &quot;mongodb://localhost:27017/local&quot;;</span><br><span class="line">var db = mongoose.connect(url);</span><br><span class="line">mongoose.connection.on(&quot;error&quot;, function() &#123;</span><br><span class="line">  console.log(&quot;error&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">mongoose.connection.on(&quot;open&quot;, function() &#123;</span><br><span class="line">  console.log(&quot;success&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>第二种方法<br>安装mongodb /npm install mongodb –save</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const MongoClient = require(&apos;mongodb&apos;).MongoClient;</span><br><span class="line">var url = &quot;mongodb://localhost:27017/local&quot;;</span><br><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  console.log(&quot;连接成功&quot;);</span><br><span class="line">  db.close();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>以下都基于mongodb的包进行操作</strong></p>
+<p>1.查询数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var url = &quot;mongodb://localhost:27017/&quot;;</span><br><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  dbo.collection(&quot;users&quot;).find(&#123;</span><br><span class="line">    &quot;name&quot;: &quot;hansu&quot;</span><br><span class="line">  &#125;).toArray((err, result) =&gt; &#123;</span><br><span class="line">    console.log(result);</span><br><span class="line">    db.close;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>2.分页查询数据</p>
+<p>limit(a) 返回从第一条数据开始的a条数据<br>limit(a,b) a:起始位置 b:查询数量 返回的是（a+1,a+1+b）之间的数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var url = &quot;mongodb://localhost:27017/&quot;;</span><br><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  dbo.collection(&quot;users&quot;).find(&#123;</span><br><span class="line">    &quot;name&quot;: &quot;hansu&quot;</span><br><span class="line">  &#125;).limit(2).toArray((err, result) =&gt; &#123;</span><br><span class="line">    console.log(result);</span><br><span class="line">    db.close;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>skip(a) 跳过前a条数据,然后读取数据，写在limit()前面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var url = &quot;mongodb://localhost:27017/&quot;;</span><br><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  dbo.collection(&quot;users&quot;).find(&#123;</span><br><span class="line">    &quot;name&quot;: &quot;hansu&quot;</span><br><span class="line">  &#125;).skip(2).limit(2).toArray((err, result) =&gt; &#123;</span><br><span class="line">    console.log(result);</span><br><span class="line">    db.close;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>3.更新数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  dbo.collection(&quot;users&quot;).update(&#123;</span><br><span class="line">    name: &quot;hansu&quot;</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    $set: &#123;</span><br><span class="line">      age: 22</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, (err, result) =&gt; &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      throw err;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(result);</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>4.删除数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  if (err) &#123;</span><br><span class="line">    throw err;</span><br><span class="line">  &#125;</span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  dbo.collection(&quot;users&quot;).remove(&#123;</span><br><span class="line">    name: &quot;zhangsan&quot;</span><br><span class="line">  &#125;, 1, (err, result) =&gt; &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      throw err;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(result);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>5.插入数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  var user = &#123;</span><br><span class="line">    name: &quot;zhangsan&quot;,</span><br><span class="line">    age: 20,</span><br><span class="line">    sex: &quot;男&quot;,</span><br><span class="line">    salary: 8000</span><br><span class="line">  &#125;</span><br><span class="line">  dbo.collection(&quot;users&quot;).insert(user, (err, result) =&gt; &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      throw err;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(result);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>6.排序</p>
+<p>sort({字段:1/-1}) 1代表升序，-1代表降序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var url = &quot;mongodb://localhost:27017/&quot;;</span><br><span class="line">MongoClient.connect(url, (err, db) =&gt; &#123;</span><br><span class="line">  var dbo = db.db(&quot;local&quot;);</span><br><span class="line">  dbo.collection(&quot;users&quot;).find().sort(&#123;</span><br><span class="line">  age:1&#125;).toArray((err, result) =&gt; &#123;</span><br><span class="line">    console.log(result);</span><br><span class="line">    db.close;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>有几个注意点：</strong></p>
 <ol>
-<li>列表1</li>
-<li>列表2</li>
-<li>列表3</li>
+<li><p>单条一般用insertOne(),多条用insertMany()</p>
+</li>
+<li><p>因为要将查询数据转化为数组，所以查询时用toArray((err,result)=&gt;{});<br>其他的话回调函数就写在方法里，如：insert({},(err,result)=&gt;{});</p>
+</li>
+<li><p>skip()写在limit()的前面</p>
+</li>
 </ol>
-<p><strong>5.分割线</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">---</span><br><span class="line">===</span><br><span class="line"></span><br><span class="line">效果如下：</span><br></pre></td></tr></table></figure>
-<p>hello world</p>
-<hr>
-<p>hello world</p>
-<p><strong>6.链接</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：[链接名称](链接地址 &quot;title&quot;)</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.baidu.com" title="百度" target="_blank" rel="noopener">百度</a></p>
-<p><strong>7.代码块</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line"></span><br><span class="line">小段行内代码：` 代码 `</span><br><span class="line"></span><br><span class="line">```大段代码：(```)</span><br></pre></td></tr></table></figure>
-<p><strong>8.图片</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![](路径)</span><br><span class="line"></span><br><span class="line">比如 ![](img/2.png)</span><br></pre></td></tr></table></figure>
-<p><strong>9.反斜杠</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输出一些特殊字符，比如* ` _ [ ] ()</span><br><span class="line"></span><br><span class="line">使用\</span><br></pre></td></tr></table></figure>
+<p>好啦基本用法都已经在这，后面会陆续更新一些mongodb+nodejs的小demo.</p>
 
       
     </div>
@@ -412,13 +425,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/01/14/三分钟玩转markdown/">三分钟玩转markdown</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/17/mongodb快速上手/">mongodb快速上手</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Hansu</a></p>
-        <p><span>发布时间:</span>2019-01-14, 22:09:13</p>
-        <p><span>最后更新:</span>2019-01-17, 23:08:11</p>
+        <p><span>发布时间:</span>2018-08-17, 23:14:06</p>
+        <p><span>最后更新:</span>2019-01-17, 23:23:27</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/01/14/三分钟玩转markdown/" title="三分钟玩转markdown">http://hansu123.github.io/2019/01/14/三分钟玩转markdown/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://hansu123.github.io/2019/01/14/三分钟玩转markdown/　　作者: Hansu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/17/mongodb快速上手/" title="mongodb快速上手">http://hansu123.github.io/2018/08/17/mongodb快速上手/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://hansu123.github.io/2018/08/17/mongodb快速上手/　　作者: Hansu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -431,15 +444,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/01/17/hexo-二-轻松整合搜索和标签云/">
-                    hexo(二)轻松整合搜索和标签云
+                <a href="/2019/01/12/关于css的一些坑/">
+                    关于css的一些坑
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/01/12/关于css的一些坑/">
-                    关于css的一些坑
+                <a href="/2018/06/16/NodeJs中Ajax传值问题/">
+                    NodeJs中Ajax传值问题
                 </a>
             </div>
         
@@ -483,7 +496,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#这是大标题"><span class="toc-number">1.</span> <span class="toc-text">这是大标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是小标题"><span class="toc-number">1.1.</span> <span class="toc-text">这是小标题</span></a></li></ol></li></ol>
+            
         
     </div>
     <style>
@@ -519,7 +532,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"三分钟玩转markdown　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"mongodb快速上手　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -558,7 +571,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/01/17/hexo-二-轻松整合搜索和标签云/" title="上一篇: hexo(二)轻松整合搜索和标签云">
+            <a href="/2019/01/12/关于css的一些坑/" title="上一篇: 关于css的一些坑">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -566,7 +579,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/01/12/关于css的一些坑/" title="下一篇: 关于css的一些坑">
+            <a href="/2018/06/16/NodeJs中Ajax传值问题/" title="下一篇: NodeJs中Ajax传值问题">
                 <i class="fa fa-angle-right"></i>
             </a>
         

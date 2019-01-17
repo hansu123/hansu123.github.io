@@ -69,7 +69,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: false
+        search: true
     }
 </script>
 
@@ -101,6 +101,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
         
 
 
@@ -177,7 +184,7 @@
                             
                                 <a class="fa 豆瓣" href="/douban" title="豆瓣"></a>
                             
-                                <a class="fa CSDN" href="https://www.csdn.net/" title="CSDN"></a>
+                                <a class="fa CSDN" href="/" title="CSDN"></a>
                             
                                 <a class="fa 网易云音乐" href="/netease" title="网易云音乐"></a>
                             
@@ -190,7 +197,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax传值问题/">Ajax传值问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax小应用/">Ajax小应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax智能提示搜索框/">Ajax智能提示搜索框</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown语法/">Markdown语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css基础/">css基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css布局/">css布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo搭配图床/">hexo搭配图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo统计功能/">hexo统计功能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo赞赏功能/">hexo赞赏功能</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax传值问题/">Ajax传值问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax小应用/">Ajax小应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax智能提示搜索框/">Ajax智能提示搜索框</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown语法/">Markdown语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB基本用法/">MongoDB基本用法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css基础/">css基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css布局/">css布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo搭配图床/">hexo搭配图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo统计功能/">hexo统计功能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo赞赏功能/">hexo赞赏功能</a></li></ul>
                     </div>
                 </section>
                 
@@ -199,7 +206,11 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a class="main-nav-link switch-friends-link" href="https://mp.csdn.net/">CSDN博客</a>
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
                     </div>
                 </section>
@@ -261,7 +272,7 @@
                             
                                 <a class="fa 豆瓣" target="_blank" href="/douban" title="豆瓣"></a>
                             
-                                <a class="fa CSDN" target="_blank" href="https://www.csdn.net/" title="CSDN"></a>
+                                <a class="fa CSDN" target="_blank" href="/" title="CSDN"></a>
                             
                                 <a class="fa 网易云音乐" target="_blank" href="/netease" title="网易云音乐"></a>
                             
