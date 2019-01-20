@@ -15,14 +15,27 @@
 
 
 
+<meta name="description" content="Hexo最全指南  相信很多朋友都写过博客，也都想开发自己的博客网站，但是一来因为需要涉及很多网站知识，不管是前端还是后台，搭建起来特别繁琐，二呢服务器域名实在太贵，本来就没有什么收入，还要维护服务器实在是无稽之谈。">
+<meta name="keywords" content="hexo原型搭建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo(二)轻松整合搜索和标签云">
-<meta property="og:url" content="http://hansu123.github.io/2019/01/17/hexo-二-轻松整合搜索和标签云/index.html">
+<meta property="og:title" content="hexo(一)快速搭建博客原型">
+<meta property="og:url" content="http://hansu123.github.io/2018/01/10/hexo-一-快速搭建博客原型/index.html">
 <meta property="og:site_name" content="Hansu">
+<meta property="og:description" content="Hexo最全指南  相信很多朋友都写过博客，也都想开发自己的博客网站，但是一来因为需要涉及很多网站知识，不管是前端还是后台，搭建起来特别繁琐，二呢服务器域名实在太贵，本来就没有什么收入，还要维护服务器实在是无稽之谈。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-17T15:15:10.813Z">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/installhexo1.png">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/hexo_init2.png">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/localhost.png">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/hansu123_io3.png">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/getssh4.png">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/gitset.jpg">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/ssh5.png">
+<meta property="og:image" content="http://plbt3fe5s.bkt.clouddn.com/success.png">
+<meta property="og:updated_time" content="2019-01-20T15:14:52.180Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo(二)轻松整合搜索和标签云">
+<meta name="twitter:title" content="hexo(一)快速搭建博客原型">
+<meta name="twitter:description" content="Hexo最全指南  相信很多朋友都写过博客，也都想开发自己的博客网站，但是一来因为需要涉及很多网站知识，不管是前端还是后台，搭建起来特别繁琐，二呢服务器域名实在太贵，本来就没有什么收入，还要维护服务器实在是无稽之谈。">
+<meta name="twitter:image" content="http://plbt3fe5s.bkt.clouddn.com/installhexo1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -54,7 +67,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>hexo(二)轻松整合搜索和标签云 | Hansu</title>
+<title>hexo(一)快速搭建博客原型 | Hansu</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -198,7 +211,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax传值问题/">Ajax传值问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax小应用/">Ajax小应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax智能提示搜索框/">Ajax智能提示搜索框</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown语法/">Markdown语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB基本用法/">MongoDB基本用法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css基础/">css基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css布局/">css布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo搭配图床/">hexo搭配图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo统计功能/">hexo统计功能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo赞赏功能/">hexo赞赏功能</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax传值问题/">Ajax传值问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax小应用/">Ajax小应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax智能提示搜索框/">Ajax智能提示搜索框</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown语法/">Markdown语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB基本用法/">MongoDB基本用法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css基础/">css基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css布局/">css布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo原型搭建/">hexo原型搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo搭配图床/">hexo搭配图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo统计功能/">hexo统计功能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo赞赏功能/">hexo赞赏功能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索，标签云/">搜索，标签云</a></li></ul>
                     </div>
                 </section>
                 
@@ -285,11 +298,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hexo-二-轻松整合搜索和标签云" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hexo-一-快速搭建博客原型" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/01/17/hexo-二-轻松整合搜索和标签云/" class="article-date">
-      <time datetime="2019-01-17T15:15:10.000Z" itemprop="datePublished">2019-01-17</time>
+      <a href="/2018/01/10/hexo-一-快速搭建博客原型/" class="article-date">
+      <time datetime="2018-01-10T15:00:21.000Z" itemprop="datePublished">2018-01-10</time>
 </a>
 
 
@@ -304,7 +317,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo(二)轻松整合搜索和标签云
+      hexo(一)快速搭建博客原型
     </h1>
   
 
@@ -314,7 +327,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">805字</span>
       </span>
     </span>
 
@@ -323,7 +336,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -333,8 +346,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/hexo轻松搭建/">hexo轻松搭建</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo原型搭建/">hexo原型搭建</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -342,7 +363,92 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h4>Hexo最全指南</h4>
+
+<p>相信很多朋友都写过博客，也都想开发自己的博客网站，但是一来因为需要涉及很多网站知识，不管是前端还是后台，搭建起来特别繁琐，二呢服务器域名实在太贵，本来就没有什么收入，还要维护服务器实在是无稽之谈。<br><a id="more"></a><br>但是有需求就一定会有解决方法，IT就是这么神奇的东西，当你跟着我一起用hexo搭建完自己的个人博客，你会发现，哇，这真的是天才的作品！</p>
+<h5>一.本地部署hexo</h5>
+
+<blockquote>
+<p>1.安装nodejs</p>
+</blockquote>
+<p>首先我们得全局安装hexo，但在安装hexo之前得先安装nodejs。<br>至于如何安装nodejs，这里就不多讲了，直接进nodejs官网下载就好，版本最好选择最新版本。</p>
+<blockquote>
+<p>2.打开nodejs,直接输入命令npm install -g hexo 安装hexo</p>
+</blockquote>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/installhexo1.png" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（npm install -g hexo）</p>
+
+<blockquote>
+<p>3.hexo init 初始化文件</p>
+</blockquote>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/hexo_init2.png" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（hexo init ）</p>
+
+<blockquote>
+<p>4.hexo g 生成静态页面<strong>（这步很关键）</strong></p>
+</blockquote>
+<p>做完上面这些你在文件夹中会看到以下文件：</p>
+<blockquote>
+<p>node_modules：是依赖包<br>public：存放的是生成的页面<br>scaffolds：命令生成文章等的模板<br>source：用命令创建的各种文章<br>themes：主题<br>_config.yml：整个博客的配置<br>db.json：source解析所得到的<br>package.json：项目所需模块项目的配置信息</p>
+</blockquote>
+<p>这里面用的比较多的就是source和themes了</p>
+<blockquote>
+<p>5.hexo server 启动本地服务</p>
+</blockquote>
+<p>直接在命令行中hexo s启动服务，在浏览器中输入localhost:4000即可</p>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/localhost.png" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（本地效果 ）</p>
+
+<p>到了这里本地hexo就搭建完毕了！</p>
+<h5>二.将hexo部署到github中</h5>
+
+<p>本地搭建完毕，但是我们想要的是一个网站，并且可以同步更新。怎么办呢? 伟大的github为我们解决了这个问题。</p>
+<blockquote>
+<p>1.注册github账号</p>
+</blockquote>
+<p>进入到<a href="https://github.com/github" title="github官网" target="_blank" rel="noopener">github官方地址</a>注册账号即可<br>然后呢，需要创建一个仓库，仓库名字格式如下：账号名.github.io。</p>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/hansu123_io3.png" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（创建仓库 ）</p>
+
+<blockquote>
+<p>2.安装git</p>
+</blockquote>
+<p>网上搜索即可，或者直接命令行install npm git –save</p>
+<blockquote>
+<p>3.创建ssh</p>
+</blockquote>
+<p>这步其实就是本地与github建立连接的一个媒介，通过ssh密钥进行身份认证，才能进行远程部署的操作。</p>
+<p>右键你的hexo根目录，打开gitbash，在gitbash中输入：<code>ssh-keygen -t rsa -C &quot;youremail@example.com</code>，生成ssh。然后按下图中的路径找到id_rsa.pub文件的内容并复制。</p>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/getssh4.png" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（路径在Created directory后面）</p>
+
+<blockquote>
+<p>4.向github中添加ssh</p>
+</blockquote>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/gitset.jpg" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（点击右上角-&gt;点开settings）</p><br><img src="http://plbt3fe5s.bkt.clouddn.com/ssh5.png" alt=""><br><p align="center" style="font-size:11px;color:grey">（点击newssh即可，把复制的内容粘贴即可）</p>
+
+<blockquote>
+<p>5.配置Github</p>
+</blockquote>
+<p>首先打开根目录下的_config.yml在最后写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">     type: git</span><br><span class="line">     repo: https://github.com/leopardpan/leopardpan.github.io.git //这个是你github上的仓库地址</span><br><span class="line">     branch: master</span><br></pre></td></tr></table></figure>
+<p>然后在node命令行中执行</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>最后在依次执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>便可在浏览器端输入 hansu123.github.io</p>
+<blockquote>
+<p>6.新建文章</p>
+</blockquote>
+<p><code>hexo new  &quot; 文章名称 &quot;</code></p>
+<p>文章路径在：根目录\source_posts下</p>
+<p>哈哈，是不是so  easy!</p>
+<p><img src="http://plbt3fe5s.bkt.clouddn.com/success.png" alt=""></p>
+<p align="center" style="font-size:11px;color:grey">（最终效果）</p>
+
+<p>至于主题，图片显示等问题后续会陆续更新哒~~</p>
+
       
     </div>
     
@@ -350,13 +456,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/01/17/hexo-二-轻松整合搜索和标签云/">hexo(二)轻松整合搜索和标签云</a></p>
+        <p><span>本文标题:</span><a href="/2018/01/10/hexo-一-快速搭建博客原型/">hexo(一)快速搭建博客原型</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Hansu</a></p>
-        <p><span>发布时间:</span>2019-01-17, 23:15:10</p>
-        <p><span>最后更新:</span>2019-01-17, 23:15:10</p>
+        <p><span>发布时间:</span>2018-01-10, 23:00:21</p>
+        <p><span>最后更新:</span>2019-01-20, 23:14:52</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/01/17/hexo-二-轻松整合搜索和标签云/" title="hexo(二)轻松整合搜索和标签云">http://hansu123.github.io/2019/01/17/hexo-二-轻松整合搜索和标签云/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://hansu123.github.io/2019/01/17/hexo-二-轻松整合搜索和标签云/　　作者: Hansu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/10/hexo-一-快速搭建博客原型/" title="hexo(一)快速搭建博客原型">http://hansu123.github.io/2018/01/10/hexo-一-快速搭建博客原型/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://hansu123.github.io/2018/01/10/hexo-一-快速搭建博客原型/　　作者: Hansu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -368,12 +474,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/01/14/三分钟玩转markdown/">
-                    三分钟玩转markdown
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/01/11/hexo-二-轻松整合搜索和标签云/">
+                    hexo(二)轻松整合搜索和标签云等常见模块
                 </a>
             </div>
+        
         
     </nav>
 
@@ -415,7 +521,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Hexo最全指南</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">一.本地部署hexo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">二.将hexo部署到github中</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -451,7 +557,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"hexo(二)轻松整合搜索和标签云　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"hexo(一)快速搭建博客原型　| Hansu　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -490,19 +596,19 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/01/11/hexo-二-轻松整合搜索和标签云/" title="上一篇: hexo(二)轻松整合搜索和标签云等常见模块">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/01/14/三分钟玩转markdown/" title="下一篇: 三分钟玩转markdown">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/17/hexo-二-轻松整合搜索和标签云/">hexo(二)轻松整合搜索和标签云</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/14/三分钟玩转markdown/">三分钟玩转markdown</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/12/关于css的一些坑/">关于css的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/17/mongodb快速上手/">mongodb快速上手</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/NodeJs中Ajax传值问题/">NodeJs中Ajax传值问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/Ajax实现智能搜索提示框/">Ajax实现智能搜索提示框</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/13/Ajax的两种写法/">Ajax的两种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/hexo-七-七牛云图床使用/">hexo(七)七牛云图床使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/14/hexo-五-轻松整合赞赏模块/">hexo(五)轻松整合赞赏模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/13/hexo-四-轻松整合统计模块/">hexo(四)轻松整合统计模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/hexo-三-轻松整合评论模块/">hexo(三)轻松整合评论模块</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/14/三分钟玩转markdown/">三分钟玩转markdown</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/12/关于css的一些坑/">关于css的一些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/17/mongodb快速上手/">mongodb快速上手</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/NodeJs中Ajax传值问题/">NodeJs中Ajax传值问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/14/Ajax实现智能搜索提示框/">Ajax实现智能搜索提示框</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/13/Ajax的两种写法/">Ajax的两种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/16/hexo-七-七牛云图床使用/">hexo(七)七牛云图床使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/14/hexo-五-轻松整合赞赏模块/">hexo(五)轻松整合赞赏模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/13/hexo-四-轻松整合统计模块/">hexo(四)轻松整合统计模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/hexo-三-轻松整合评论模块/">hexo(三)轻松整合评论模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/11/hexo-二-轻松整合搜索和标签云/">hexo(二)轻松整合搜索和标签云等常见模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/10/hexo-一-快速搭建博客原型/">hexo(一)快速搭建博客原型</a></li></ul>
 
 
 

@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>hexo(二)轻松整合搜索和标签云</title>
-      <link href="/2019/01/17/hexo-%E4%BA%8C-%E8%BD%BB%E6%9D%BE%E6%95%B4%E5%90%88%E6%90%9C%E7%B4%A2%E5%92%8C%E6%A0%87%E7%AD%BE%E4%BA%91/"/>
-      <url>/2019/01/17/hexo-%E4%BA%8C-%E8%BD%BB%E6%9D%BE%E6%95%B4%E5%90%88%E6%90%9C%E7%B4%A2%E5%92%8C%E6%A0%87%E7%AD%BE%E4%BA%91/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>三分钟玩转markdown</title>
       <link href="/2019/01/14/%E4%B8%89%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACmarkdown/"/>
       <url>/2019/01/14/%E4%B8%89%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACmarkdown/</url>
@@ -263,6 +250,56 @@
         <tags>
             
             <tag> hexo统计功能 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo(二)轻松整合搜索和标签云等常见模块</title>
+      <link href="/2018/01/11/hexo-%E4%BA%8C-%E8%BD%BB%E6%9D%BE%E6%95%B4%E5%90%88%E6%90%9C%E7%B4%A2%E5%92%8C%E6%A0%87%E7%AD%BE%E4%BA%91/"/>
+      <url>/2018/01/11/hexo-%E4%BA%8C-%E8%BD%BB%E6%9D%BE%E6%95%B4%E5%90%88%E6%90%9C%E7%B4%A2%E5%92%8C%E6%A0%87%E7%AD%BE%E4%BA%91/</url>
+      
+        <content type="html"><![CDATA[<h4>hexo在yelee主题下搭建搜索，标签云模块</h4><h5>一.搜索和标签云模块</h5><blockquote><p>1.本地搜索</p></blockquote><p>首先在node中输入<code>npm install hexo-generator-searchdb --save</code>即可安装插件</p><p>然后修改配置文件，在<strong>根目录</strong>_config.yml中将search改成如下所示<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">search: </span><br><span class="line">on: true</span><br><span class="line">onload: false</span><br></pre></td></tr></table></figure></p><ul><li><p>onload: true : 索引数据 search.xml 随页面一起加载 [效率优先]</p></li><li><p>onload: false : 当激活搜索框时再下载索引数据 [按需加载]</p></li></ul><p>最后回到<strong>主题下</strong>的_config_yml添加以下代码即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">enable: true</span><br></pre></td></tr></table></figure><p><img src="http://plbt3fe5s.bkt.clouddn.com/search.jpg" alt=""></p><p align="center" style="font-size:11px;color:grey">（搜索效果）</p><blockquote><p>2.主菜单设置</p></blockquote><p>menu:<br>  主页: /<br>  所有文章: /archives/<br>  随笔: /tags/随笔<br>  标签云: /tags/<br>  关于我: /about/</p><p>想要点击生成页面<br>必须hexo new page 标签名<br>然后去对应的文章中的头部添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">categories: &quot;分类名&quot; </span><br><span class="line">tags: [标签名1, 标签名2] (中间用逗号和空格隔开)</span><br></pre></td></tr></table></figure><p>之后点击标签云，就会出现标签云效果</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/cloud.jpg" alt=""></p><p align="center" style="font-size:11px;color:grey">（标签云效果）</p><h5>一.小问题汇总</h5><blockquote><p>1.yelee的一些小问题总结</p></blockquote><ol><li><p>首页文章不显示：把_config.yml里的<code>search onload:false 改成on:false</code></p></li><li><p>文章显示一部分：在文章中添加<code>&lt;!--more--&gt;</code>即可<code>&lt;!--more--&gt;</code>后面的部分将不会显示</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo轻松搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 搜索，标签云 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo(一)快速搭建博客原型</title>
+      <link href="/2018/01/10/hexo-%E4%B8%80-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8E%9F%E5%9E%8B/"/>
+      <url>/2018/01/10/hexo-%E4%B8%80-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8E%9F%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h4>Hexo最全指南</h4><p>相信很多朋友都写过博客，也都想开发自己的博客网站，但是一来因为需要涉及很多网站知识，不管是前端还是后台，搭建起来特别繁琐，二呢服务器域名实在太贵，本来就没有什么收入，还要维护服务器实在是无稽之谈。<br><a id="more"></a><br>但是有需求就一定会有解决方法，IT就是这么神奇的东西，当你跟着我一起用hexo搭建完自己的个人博客，你会发现，哇，这真的是天才的作品！</p><h5>一.本地部署hexo</h5><blockquote><p>1.安装nodejs</p></blockquote><p>首先我们得全局安装hexo，但在安装hexo之前得先安装nodejs。<br>至于如何安装nodejs，这里就不多讲了，直接进nodejs官网下载就好，版本最好选择最新版本。</p><blockquote><p>2.打开nodejs,直接输入命令npm install -g hexo 安装hexo</p></blockquote><p><img src="http://plbt3fe5s.bkt.clouddn.com/installhexo1.png" alt=""></p><p align="center" style="font-size:11px;color:grey">（npm install -g hexo）</p><blockquote><p>3.hexo init 初始化文件</p></blockquote><p><img src="http://plbt3fe5s.bkt.clouddn.com/hexo_init2.png" alt=""></p><p align="center" style="font-size:11px;color:grey">（hexo init ）</p><blockquote><p>4.hexo g 生成静态页面<strong>（这步很关键）</strong></p></blockquote><p>做完上面这些你在文件夹中会看到以下文件：</p><blockquote><p>node_modules：是依赖包<br>public：存放的是生成的页面<br>scaffolds：命令生成文章等的模板<br>source：用命令创建的各种文章<br>themes：主题<br>_config.yml：整个博客的配置<br>db.json：source解析所得到的<br>package.json：项目所需模块项目的配置信息</p></blockquote><p>这里面用的比较多的就是source和themes了</p><blockquote><p>5.hexo server 启动本地服务</p></blockquote><p>直接在命令行中hexo s启动服务，在浏览器中输入localhost:4000即可</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/localhost.png" alt=""></p><p align="center" style="font-size:11px;color:grey">（本地效果 ）</p><p>到了这里本地hexo就搭建完毕了！</p><h5>二.将hexo部署到github中</h5><p>本地搭建完毕，但是我们想要的是一个网站，并且可以同步更新。怎么办呢? 伟大的github为我们解决了这个问题。</p><blockquote><p>1.注册github账号</p></blockquote><p>进入到<a href="https://github.com/github" title="github官网" target="_blank" rel="noopener">github官方地址</a>注册账号即可<br>然后呢，需要创建一个仓库，仓库名字格式如下：账号名.github.io。</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/hansu123_io3.png" alt=""></p><p align="center" style="font-size:11px;color:grey">（创建仓库 ）</p><blockquote><p>2.安装git</p></blockquote><p>网上搜索即可，或者直接命令行install npm git –save</p><blockquote><p>3.创建ssh</p></blockquote><p>这步其实就是本地与github建立连接的一个媒介，通过ssh密钥进行身份认证，才能进行远程部署的操作。</p><p>右键你的hexo根目录，打开gitbash，在gitbash中输入：<code>ssh-keygen -t rsa -C &quot;youremail@example.com</code>，生成ssh。然后按下图中的路径找到id_rsa.pub文件的内容并复制。</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/getssh4.png" alt=""></p><p align="center" style="font-size:11px;color:grey">（路径在Created directory后面）</p><blockquote><p>4.向github中添加ssh</p></blockquote><p><img src="http://plbt3fe5s.bkt.clouddn.com/gitset.jpg" alt=""></p><p align="center" style="font-size:11px;color:grey">（点击右上角-&gt;点开settings）</p><br><img src="http://plbt3fe5s.bkt.clouddn.com/ssh5.png" alt=""><br><p align="center" style="font-size:11px;color:grey">（点击newssh即可，把复制的内容粘贴即可）</p><blockquote><p>5.配置Github</p></blockquote><p>首先打开根目录下的_config.yml在最后写入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">     type: git</span><br><span class="line">     repo: https://github.com/leopardpan/leopardpan.github.io.git //这个是你github上的仓库地址</span><br><span class="line">     branch: master</span><br></pre></td></tr></table></figure><p>然后在node命令行中执行</p><p><code>npm install hexo-deployer-git --save</code></p><p>最后在依次执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>便可在浏览器端输入 hansu123.github.io</p><blockquote><p>6.新建文章</p></blockquote><p><code>hexo new  &quot; 文章名称 &quot;</code></p><p>文章路径在：根目录\source_posts下</p><p>哈哈，是不是so  easy!</p><p><img src="http://plbt3fe5s.bkt.clouddn.com/success.png" alt=""></p><p align="center" style="font-size:11px;color:grey">（最终效果）</p><p>至于主题，图片显示等问题后续会陆续更新哒~~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo轻松搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo原型搭建 </tag>
             
         </tags>
       
